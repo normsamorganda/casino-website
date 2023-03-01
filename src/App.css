@@ -1,38 +1,320 @@
-.App {
+/* TOP-NAV */
+
+body{
+  background-color: black;
+}
+
+.wrapper {
+  position:relative;
+}
+.icon {
+  padding: 4px;
+  position: absolute;
+  box-sizing:border-box;
+  top:50%;
+  left:2px;
+  transform: translateY(-50%);
+}
+
+.input-user {
+  box-sizing:border-box;
+  padding-left: 1.5rem;
+  color:white;
+}
+.white-icon{
+  color:white !important
+}
+.flame-logo{
+  height:3rem;
+  width:2rem;
+}
+.text-gold{
+  color:#fdc858;
+}
+
+/* END OF TOP-NAV */
+/* MENU-NAV */
+.bg-gold{
+  background: linear-gradient(to bottom, #fdc858 50%, #e1b24e 50%);
+  width: 100%;
+}
+.f-bold{
+  font-weight: bold;
+}
+li:hover{
+  color:white;
+  cursor: pointer;
+}
+/* END OF MENU-NAV */
+
+/* BANNER*/
+.banner{
+  height:auto;
+  min-height:150px;
+  width: 100%;
+  background-image: url(./images/banner-fish.png);
+  background-size: cover;
+  background-position: center;
+}
+
+/* END OF BANNER*/
+/* NAV SEARCH */
+.wrapper-search{
+  position:relative;
+  width:270px;
+}
+.icon-search{
+  padding: 4px;
+  position: absolute;
+  box-sizing:border-box;
+  top:50%;
+  left:220px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.input-search {
+  box-sizing:border-box;
+  width:250px;
+  padding-right:30px;
+  padding-left:20px;
+}
+.input-search::placeholder {
+ color:white;
+ font-size: 12px;
+}
+.bg-darkGold{
+ background-color:#e1b24e;
+}
+.bg-graydark{
+  background-color:#272727;
+}
+/* jackpot banner */
+.jackpot-banner{
+  width:350px;
+  height:100px;
+  position: absolute;
+  margin: 0 auto;
+}
+.dotted-border{
+  border:6px dotted white;
+}
+.gradient-dollar{
+  background: linear-gradient(to bottom, #800000, #FFA500);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size:70px;
+}
+
+.game-card {
+  position: relative;
+  width: 330px;
+  height: 300px;
+  overflow: hidden;
+}
+
+.game-card img {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.game-card:hover img {
+  transform: scale(1.2);
+  filter: brightness(50%);
+}
+
+.game-card-button {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+.game-card:hover .game-card-button {
+  opacity: 1;
+}
+
+.button {
+  display: block;
+  margin: 10px;
+  padding: 10px 20px;
+  border: none;
+  background-color: white;
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: black;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.new {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-top: 80px solid rgb(0, 0, 0);
+  border-right: 80px solid transparent;
+  text-align: center;
+  font-size: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+}
+.move{
+  z-index: 1;
+  position: relative;
+  bottom:50px;
+  transform: rotate(-45deg);
+
+}
+.star-rating {
+  font-size: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.bi-star {
+  color: #ccc;
+}
+
+.checked {
+  color: #f7c14a;
+}
+.border-dotted{
+  border-bottom: dotted;
+  color: #4e4e4e;
+}
+.font-promotion {
+  font-size: 80px;
+  font-weight: 700;
+}
+.promotion {
+  width: 200px;
+  background-color: #b01f1f;
+  border-bottom-right-radius: 50px 40px;}
+
+.promotion h5 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+  color: white;
+  padding:10px 10px;
+}
+.bg-fade{
+  background-image: url(./images/homepage-mockup.png);
+  background-color: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+
+}
+.main-background{
+  width:100%;
+  background-image: url(./images/background.png);
+}
+
+
+.loader {
+  width: 100%;
+  height: 8px;
+  background-color: #ccc;
+  position: relative;
+  border-radius: 10px;
+}
+
+.loader::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20%;
+  height: 100%;
+  background-color: red;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.loader::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #ccc;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.loader1 {
+  width: 100%;
+  height: 8px;
+  background-color: #ccc;
+  position: relative;
+  border-radius: 10px;
+}
+
+.loader1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60%;
+  height: 100%;
+  background-color: red;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.loader1::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #ccc;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.f-10{
+  font-size: 18px;
+}
+.f-20{
+  font-size: 25px;
+}
+.f-50{
+  font-size: 50px;
+}
+.border-black{
+  border: none;
+  background:-webkit-repeating-linear-gradient(11deg, #a3a3a3 0%, #8c8c8c 10%);
+  background:-o-repeating-linear-gradient(11deg, #a3a3a3 0%, #8c8c8c 10%);
+  background:-moz-repeating-linear-gradient(11deg, #a3a3a3 0%, #8c8c8c 10%);
+  background:repeating-linear-gradient(11deg, #a3a3a3 0%, #8c8c8c 10%);
+  height: 12px;
+  width: 100%;
+}
+.border-black1{
+  border: none;
+  background:-webkit-repeating-linear-gradient(11deg, #a3a3a3 0%, #8c8c8c 10%);
+  background:-o-repeating-linear-gradient(11deg, #a3a3a3 0%, #8c8c8c 10%);
+  background:-moz-repeating-linear-gradient(11deg, #a3a3a3 0%, #8c8c8c 10%);
+  background:repeating-linear-gradient(11deg, #a3a3a3 0%, #8c8c8c 10%);
+  height: 2px; 
+  width: 100%; 
+}
+.border-white{
+  border: solid 2px red;
 }
