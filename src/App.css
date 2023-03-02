@@ -318,3 +318,6 @@ li:hover{
 .border-white{
   border: solid 2px red;
 }
+.border-gold{
+border:solid 5px gold;
+}

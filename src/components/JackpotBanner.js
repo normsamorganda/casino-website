@@ -14,7 +14,7 @@ const JackpotBanner = () => {
               </Col>
             <Col  lg={8}>
               <div className='d-flex justify-content-center align-items-center dotted-border py-2 '>
-                <div className='bg-white'>
+                <div className='bg-white w-100'>
                     <h1 className='gradient-dollar text-center'>USD 150, 563, 134.02</h1>
                 </div>
 

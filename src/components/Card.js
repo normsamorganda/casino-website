@@ -6,7 +6,7 @@ const Card = ({gameProvider, gameTitle, img, newWord}) => {
 
   return (
     <>
-         <div className="game-card mx-auto">
+         <div className="game-card mx-auto border-gold">
                 <img src={img} alt="Card Image"/>
                  {newWord ? (<div className="new"><h4 className='move'>New</h4></div>) : ''}
                   <div className="game-card-button">
